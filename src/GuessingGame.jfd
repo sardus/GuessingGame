@@ -1,0 +1,42 @@
+JFDML JFormDesigner: "7.0.1.0.272" Java: "11.0.5" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+			"$horizontalGroup": "par l {seq l {space :p:143:p, comp btnGuess:::p::p, space ::181:x}, seq {space :::p, par l {comp firstLabel::::386:x, seq {comp label1:::p:253:p, space s:::p, comp txtGuess:::p:75:p, space :0:40:x}, comp lblOutput::t::386:x}, space :::p}}"
+			"$verticalGroup": "par l {seq l {space :::p, comp firstLabel:::p::p, space :p:32:p, par b {comp label1::b:p::p, comp txtGuess::b:p::p}, space :p:34:p, comp btnGuess:::p::p, space :p:45:p, comp lblOutput:::p::p, space ::71:x}}"
+		} ) {
+			name: "this"
+			"title": "HiLo Guessing game"
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "firstLabel"
+				"text": "Welcome to Shmelev Andrei's HiLo Guesiin game"
+				"horizontalAlignment": 0
+				"font": new com.jformdesigner.model.SwingDerivedFont( null, 1, 0, false )
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label1"
+				"text": "Guess a number between 1 and 100:"
+				"horizontalAlignment": 4
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "btnGuess"
+				"text": "GUESS!"
+				"font": new com.jformdesigner.model.SwingDerivedFont( null, 1, 0, false )
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "btnGuessActionPerformed", true ) )
+			} )
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "txtGuess"
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "lblOutput"
+				"text": "Enter a number above and click Guess!"
+				"horizontalAlignment": 0
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 0, 0 )
+			"size": new java.awt.Dimension( 400, 300 )
+		} )
+	}
+}
